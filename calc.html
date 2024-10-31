@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="color-scheme" content="dark" , initial-scale="1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p class="answer" id="showResult"></p>
+    <div class="container">
+      <main>
+        <section>
+          <button class="calculate" onclick="resetSign()">AC</button>
+          <button class="calculate" onclick="subtractSign()">-</button>
+          <button class="calculate" onclick="percentSign()">%</button>
+          <button class="calculate1" onclick="divisionSign()">/</button>
+
+          <button class="calculate" onclick="plusSeven()">7</button>
+          <button class="calculate" onclick="plusEight()">8</button>
+          <button class="calculate" onclick="plusNine()">9</button>
+          <button class="calculate1" onclick="multiSign()">*</button>
+
+          <button class="calculate" onclick="plusFour()">4</button>
+          <button class="calculate" onclick="plusFive()">5</button>
+          <button class="calculate" onclick="plusSix()">6</button>
+          <button class="calculate1" onclick="subtractSign()">-</button>
+
+          <button class="calculate" onclick="plusOne()">1</button>
+          <button class="calculate" onclick="plusTwo()">2</button>
+          <button class="calculate" onclick="plusThree()">3</button>
+          <button class="calculate1" onclick="plusSign()">+</button>
+
+          <button class="calculate" onclick="plusZero()">0</button>
+          <button class="calculate" onclick="pointSign()">.</button>
+          <button class="calculate" onclick="powerSign()">^</button>
+          <button class="calculate1" onclick="equalSign()">=</button>
+        </section>
+      </main>
+    </div>
+    <script>
+      let calculation = [];
+      const plusOne = () => {
+        calculation += 1;
+        finalResult();
+      };
+      const plusTwo = () => {
+        calculation += 2;
+        finalResult();
+      };
+      const plusThree = () => {
+        calculation += 3;
+        finalResult();
+      };
+      const plusFour = () => {
+        calculation += 4;
+        finalResult();
+      };
+      const plusFive = () => {
+        calculation += 5;
+        finalResult();
+      };
+      const plusSix = () => {
+        calculation += 6;
+        finalResult();
+      };
+      const plusSeven = () => {
+        calculation += 7;
+        finalResult();
+      };
+      const plusEight = () => {
+        calculation += 8;
+        finalResult();
+      };
+      const plusNine = () => {
+        calculation += 9;
+        finalResult();
+      };
+      const plusSign = () => {
+        calculation += "  + ";
+      };
+      const multiSign = () => {
+        calculation += " * ";
+      };
+      const divisionSign = () => {
+        calculation += " / ";
+      };
+      const subtractSign = () => {
+        calculation += " - ";
+      };
+      const percentSign = () => {
+        calculation = calculation / 100;
+      };
+      const equalSign = () => {
+        calculation = eval(calculation);
+        finalResult();
+      };
+      const pointSign = () => {
+        calculation += ".";
+      };
+      const powerSign = () => {
+        calculation **= 2;
+      };
+
+      const resetSign = () => {
+        calculation = 0;
+        finalResult();
+      };
+      const finalResult = () => {
+        const showAll = document.getElementById("showResult");
+        showAll.innerHTML = ` ${calculation}`;
+      };
+    </script>
+  </body>
+</html>
