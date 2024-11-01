@@ -1,40 +1,115 @@
-let calculation = [];
+let isCalculated = false
+
+
+let calculation = ''
+
       const plusOne = () => {
-        calculation += 1;
+        if (isCalculated) {
+          calculation = "";
+          calculation += 1;
+          isCalculated = false
+       } else {
+          
+          calculation += 1;
+       }
         finalResult();
       };
       const plusTwo = () => {
-        calculation += 2;
+        if (isCalculated) {
+          calculation = ""
+          calculation += 2
+          isCalculated = false
+        } else {
+         
+          calculation += 2
+        }
         finalResult();
       };
       const plusThree = () => {
-        calculation += 3;
+        if (isCalculated) {
+          calculation = ""
+          calculation += 3
+          isCalculated = false
+        } else {
+          
+          calculation += 3
+        }
         finalResult();
       };
       const plusFour = () => {
-        calculation += 4;
+        if (isCalculated) {
+          calculation = ""
+          calculation += 4
+          isCalculated = false
+        } else {
+          
+          calculation += 4
+        }
         finalResult();
       };
       const plusFive = () => {
-        calculation += 5;
+        if (isCalculated) {
+          calculation = ""
+          calculation += 5
+          isCalculated = false
+        }  else {
+         
+          calculation += 5
+        }
         finalResult();
       };
       const plusSix = () => {
-        calculation += 6;
+        if (isCalculated) {
+          calculation = ""
+          calculation += 6
+          isCalculated = false
+        } else {
+          
+          calculation += 6
+        }
+       
         finalResult();
       };
       const plusSeven = () => {
-        calculation += 7;
+        if ( isCalculated) {
+          calculation = ""
+          calculation += 7
+          isCalculated = false
+        } else {
+          
+          calculation += 7
+        }
+       
         finalResult();
       };
       const plusEight = () => {
-        calculation += 8;
+        if (isCalculated) {
+          calculation = ""
+          calculation += 8
+          isCalculated = false
+        } else {
+         
+          calculation += 8
+        }
+        
         finalResult();
       };
       const plusNine = () => {
-        calculation += 9;
+        if (isCalculated) {
+          calculation = ""
+          calculation += 9
+          isCalculated = false
+        } else {
+          
+          calculation += 9
+        }
+        
         finalResult();
       };
+      const plusZero = () => {
+        calculation = 0
+        finalResult()
+      }
       const plusSign = () => {
         calculation += "  + ";
       };
@@ -52,13 +127,16 @@ let calculation = [];
       };
       const equalSign = () => {
         calculation = eval(calculation);
+        isCalculated = true;
         finalResult();
       };
       const pointSign = () => {
         calculation += ".";
+        
       };
       const powerSign = () => {
         calculation **= 2;
+        
       };
 
       const resetSign = () => {
@@ -69,3 +147,10 @@ let calculation = [];
         const showAll = document.getElementById("showResult");
         showAll.innerHTML = ` ${calculation}`;
       };
+
+      // let a = 5
+      // let b = 10
+      // console.log(a && b);
+      // console.log(a || b);
+      
+      
